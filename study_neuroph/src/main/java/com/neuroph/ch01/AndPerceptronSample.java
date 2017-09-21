@@ -1,6 +1,6 @@
-package com.wex.neuroph.ch01;
+package com.neuroph.ch01;
 
-import com.wex.neuroph.util.NetWorkUtil;
+import com.neuroph.util.NetWorkUtil;
 import org.neuroph.core.NeuralNetwork;
 import org.neuroph.core.data.DataSet;
 import org.neuroph.nnet.Perceptron;

@@ -1,4 +1,4 @@
-package com.wex.neuroph.ch01;
+package com.neuroph.ch01;
 
 import org.neuroph.core.NeuralNetwork;
 import org.neuroph.core.data.DataSet;

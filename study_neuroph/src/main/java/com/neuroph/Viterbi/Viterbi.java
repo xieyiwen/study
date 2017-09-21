@@ -1,4 +1,4 @@
-package com.wex.neuroph.Viterbi;
+package com.neuroph.Viterbi;
 
 /**
  * Created by 谢益文 on 2017/8/2.

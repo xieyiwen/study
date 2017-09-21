@@ -1,4 +1,4 @@
-package com.wex.neuroph.util;
+package com.neuroph.util;
 
 import org.neuroph.core.NeuralNetwork;
 
