@@ -1,4 +1,4 @@
-package com.neuroph.ch01;
+package com.neuroph.logicalOperator;
 
 import org.neuroph.core.Connection;
 import org.neuroph.core.NeuralNetwork;

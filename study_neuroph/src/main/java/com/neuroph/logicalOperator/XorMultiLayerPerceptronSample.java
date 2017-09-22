@@ -1,4 +1,4 @@
-package com.neuroph.ch01;
+package com.neuroph.logicalOperator;
 
 import org.neuroph.core.Connection;
 import org.neuroph.core.Layer;
@@ -83,6 +83,7 @@ public class XorMultiLayerPerceptronSample extends NeuralNetwork {
     }
 
     public static void main(String[] args){
+
         DataSet data = new DataSet(2,1);
 
         data.addRow(new double[]{0,0},new double[]{Double.NaN});

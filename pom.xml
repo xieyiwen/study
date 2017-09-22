@@ -12,6 +12,7 @@
         <module>study_neuroph</module>
         <module>study_java</module>
         <module>study_neo4j</module>
+        <module>study_python</module>
     </modules>
 
     <dependencies>
@@ -20,6 +21,22 @@
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.3</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.9</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.14</version>
         </dependency>
     </dependencies>
 

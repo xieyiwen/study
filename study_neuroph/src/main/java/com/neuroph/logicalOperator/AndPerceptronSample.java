@@ -1,9 +1,11 @@
-package com.neuroph.ch01;
+package com.neuroph.logicalOperator;
 
 import com.neuroph.util.NetWorkUtil;
 import org.neuroph.core.NeuralNetwork;
 import org.neuroph.core.data.DataSet;
 import org.neuroph.nnet.Perceptron;
+
+import java.util.Properties;
 
 /**
  * Created by 谢益文 on 2017/7/28.
@@ -23,13 +25,16 @@ public class AndPerceptronSample {
 
         network.learn(data);
 
-        network.save("src/main/resources/data/and_perception.nnet");
+        Properties properties = System.getProperties();
+
+        network.save("study_neuroph/src/main/resources/perceptron/and_perception.nnet");
     }
 
 
     public static void main(String[] args){
+        trainAndNetWork();
         NeuralNetwork network = NetWorkUtil
-                .getNetWorkFromFile("src/main/resources/data/and_perception.nnet");
+                .getNetWorkFromFile("study_neuroph/src/main/resources/perceptron/and_perception.nnet");
         network.setInput(1,1);
         network.calculate();
         double[] output = network.getOutput();
