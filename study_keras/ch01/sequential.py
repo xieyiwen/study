@@ -1,3 +1,4 @@
+# 序贯模型基础练习
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 from keras import optimizers
@@ -13,8 +14,6 @@ model.compile(loss='mean_squared_error', optimizer=sgd)
 import numpy as np
 data = np.random.random((1000, 100))
 labels = np.random.randint(2, size=(1000, 1))
-
-
 
 # Train the model, iterating on the data in batches of 32 samples
 model.fit(data, labels, epochs=10, batch_size=32)
