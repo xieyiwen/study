@@ -17,6 +17,7 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private UserRepository userRepository;
 
+    @Override
     @Transactional
     public List<User> getFriends(User user){
         List<User> friends = userRepository.getFriends(user);
@@ -26,10 +27,12 @@ public class UserServiceImpl implements UserService{
         return null;
     }
 
+    @Override
     public void save(User user) {
         userRepository.save(user);
     }
 
+    @Override
     public void batchSave(List<User> users) {
         userRepository.save(users);
     }

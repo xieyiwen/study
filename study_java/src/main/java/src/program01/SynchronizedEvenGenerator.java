@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
  * IntGenerator produce a number,judge the number`s parity
  * Created by 谢益文 on 2017/3/7.
  */
-public class SynchronizedEvenGenerator extends IntGenerator{
+public class SynchronizedEvenGenerator extends AbstractIntGenerator{
     private int currentCount = 0;
     @Override
     public synchronized int next() {
@@ -56,7 +56,7 @@ class MethodClass{
 /**
  * build an abstract class,define some common behavior
  */
-abstract class IntGenerator{
+abstract class AbstractIntGenerator{
     private volatile boolean canceled = false;
 
     public abstract int next();  //product a next number
@@ -67,10 +67,10 @@ abstract class IntGenerator{
 //When generator produce a number,judge the number`s parity
 class EventChecker implements Runnable{
 
-    private IntGenerator generator;
+    private AbstractIntGenerator generator;
     private final int id;
 
-    public EventChecker(IntGenerator generator,int id){
+    public EventChecker(AbstractIntGenerator generator,int id){
         this.generator = generator;
         this.id = id;
     }
@@ -86,7 +86,7 @@ class EventChecker implements Runnable{
     }
 
     //judge parity from 0 to count
-    public static void test(IntGenerator generator,int count){
+    public static void test(AbstractIntGenerator generator,int count){
         ExecutorService ex = Executors.newCachedThreadPool();
         for(int i=1;i<=count;i++){
             ex.execute(new EventChecker(generator,i));
@@ -95,7 +95,7 @@ class EventChecker implements Runnable{
     }
 
     //default value for count
-    public static void test(IntGenerator generator){
+    public static void test(AbstractIntGenerator generator){
         test(generator,10);
     }
 }

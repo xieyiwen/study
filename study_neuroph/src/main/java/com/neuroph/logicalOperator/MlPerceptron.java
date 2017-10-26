@@ -80,8 +80,9 @@ public class MlPerceptron extends NeuralNetwork<BackPropagation> {
             layer = LayerFactory.createLayer(neuronsNum, neuronProperties);
             this.addLayer(layer);
             // 最后一层不需要偏置
-            if(layerIdx != neuronsInLayers.size()-1)
+            if(layerIdx != neuronsInLayers.size()-1) {
                 layer.addNeuron(new BiasNeuron());
+            }
             // 连接各层
             if (prevLayer != null) {
                 ConnectionFactory.fullConnect(prevLayer, layer);

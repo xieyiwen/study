@@ -48,3 +48,15 @@
     验证的方法，返回损失值和准确率
     例如：
         loss, accuracy = model.evaluate(X_test, y_test) 
+        
+##### 嵌入层Embedding
+     keras.layers.embeddings.Embedding(input_dim, output_dim, embeddings_initializer='uniform', embeddings_regularizer=None, activity_regularizer=None, embeddings_constraint=None, mask_zero=False, input_length=None)
+     
+     嵌入层将正整数(下标)转换为具有固定大小的向量    
+     Embedding层只能作为模型的第一层
+     参数：
+        1.  input_dim:大于或等于0的整数，字典长度，及输入数据最大下标+1
+        2.  output_dim:大于0的整数，代表全连接嵌入的维度  输入维度
+        3.  
+        
+        

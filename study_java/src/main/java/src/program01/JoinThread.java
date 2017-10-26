@@ -28,7 +28,7 @@ class Producer extends Thread{
         System.out.println("producer is producing!please wait a moment...");
         try {
             //生产者生产
-            Thread.currentThread().sleep(2000);
+            Thread.sleep(2000);
             System.out.println("producer is complete！");
         } catch (InterruptedException e) {
             e.printStackTrace();

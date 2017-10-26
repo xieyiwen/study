@@ -2,6 +2,7 @@ package src.program01;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
@@ -177,15 +178,14 @@ class T1{
 
 class SleepThread implements Runnable{
 
+
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName()+" start");
         try {
-            long sleepTime = (long)(Math.random() * 10);
+            long sleepTime = new Random().nextInt(10);
 
             TimeUnit.MILLISECONDS.sleep(sleepTime);
-            //等同于：Thread.currentThread().sleep(sleepTime*1000);
-
             System.out.println(Thread.currentThread().getName()+" sleep "+sleepTime +"s!");
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -203,6 +203,7 @@ class SumEntity implements Callable{
     public SumEntity(int number){
         this.number = number;
     }
+
     @Override
     public Object call() throws Exception {
         if(number == 0){

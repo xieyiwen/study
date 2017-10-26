@@ -7,9 +7,11 @@ package com.neuroph.Viterbi;
  */
 public class WeatherHMM {
     static enum Weather{
+        //晴天 雨天
         Sunday,Rainy
     }
     static enum Active{
+        //步行 逛街 搞卫生
         Walk,Shop,Clean
     }
     //已知序列  walk shop clean

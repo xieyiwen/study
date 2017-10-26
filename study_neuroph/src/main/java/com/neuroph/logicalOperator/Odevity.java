@@ -48,10 +48,18 @@ public class Odevity implements LearningEventListener {
         return result;
     }
     public static String networkOutputDisplay(double[] networkOutput){
-        if(((int)networkOutput[3])==1)return "正偶数";
-        if(((int)networkOutput[2])==1)return "负偶数";
-        if(((int)networkOutput[1])==1)return "正奇数";
-        if(((int)networkOutput[0])==1)return "负奇数";
+        if(((int)networkOutput[3])==1) {
+            return "正偶数";
+        }
+        if(((int)networkOutput[2])==1) {
+            return "负偶数";
+        }
+        if(((int)networkOutput[1])==1) {
+            return "正奇数";
+        }
+        if(((int)networkOutput[0])==1) {
+            return "负奇数";
+        }
         return "未知";
     }
 
@@ -117,6 +125,7 @@ public class Odevity implements LearningEventListener {
         System.out.println("正确率："+(COUNT-badcount*1.0)/COUNT*100.0+"%");
     }
 
+    @Override
     public void handleLearningEvent(LearningEvent learningEvent) {
         System.out.println("============");
         System.out.println(learningEvent.getClass().toString());

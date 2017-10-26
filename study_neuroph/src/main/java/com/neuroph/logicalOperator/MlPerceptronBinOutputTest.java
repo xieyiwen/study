@@ -57,6 +57,7 @@ public class MlPerceptronBinOutputTest implements LearningEventListener {
         }
     }
 
+    @Override
     public void handleLearningEvent(LearningEvent learningEvent) {
         System.out.println("============");
         System.out.println(learningEvent.getClass().toString());

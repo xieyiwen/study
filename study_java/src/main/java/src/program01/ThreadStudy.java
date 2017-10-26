@@ -45,7 +45,7 @@ class Thread1 implements Runnable{
         int i = 3;
         while(i-- > 0){
             System.out.println(Thread.currentThread().getName()+":"+i);
-            Thread.currentThread().yield();
+            Thread.yield();
         }
         System.out.println(Thread.currentThread().getName()+" finish!");
     }

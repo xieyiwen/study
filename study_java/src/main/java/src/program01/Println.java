@@ -34,10 +34,11 @@ public class Println {
         PrintStream myStream = new PrintStream(System.out){
             @Override
             public void println(String x) {
-                if("a=10".equals(x))
+                if("a=10".equals(x)) {
                     super.println("a=100");
-                else if ("b=10".equals(x))
+                } else if ("b=10".equals(x)) {
                     super.println("b=200");
+                }
             }
         };
 
