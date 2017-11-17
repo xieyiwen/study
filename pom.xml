@@ -13,6 +13,7 @@
         <module>study_java</module>
         <module>study_neo4j</module>
         <module>study_python</module>
+        <module>study_deeplearning4j</module>
     </modules>
 
     <dependencies>
